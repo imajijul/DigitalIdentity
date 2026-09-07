@@ -1,5 +1,5 @@
-import { query, IDatabaseClient } from '../config/database.ts';
-import { AuditLog } from '../types/index.ts';
+import { query, IDatabaseClient } from '../config/database';
+import { AuditLog } from '../types/index';
 
 export const auditRepository = {
   async log(entry: {
@@ -90,3 +90,4 @@ export const auditRepository = {
     };
   },
 };
+

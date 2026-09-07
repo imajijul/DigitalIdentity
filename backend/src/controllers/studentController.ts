@@ -1,8 +1,8 @@
 import { Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth.ts';
-import { getAuthorizedInstituteId } from '../middleware/tenant.ts';
-import { studentService } from '../services/studentService.ts';
-import { validateStudentInput } from '../validators/index.ts';
+import { AuthenticatedRequest } from '../middleware/auth';
+import { getAuthorizedInstituteId } from '../middleware/tenant';
+import { studentService } from '../services/studentService';
+import { validateStudentInput } from '../validators/index';
 
 export const studentController = {
   async list(req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> {
@@ -147,3 +147,4 @@ export const studentController = {
     }
   },
 };
+

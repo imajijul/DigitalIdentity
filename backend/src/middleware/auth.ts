@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { verifyAccessToken } from '../utils/jwt.ts';
-import { AuthTokenPayload, UserRole } from '../types/index.ts';
+import { verifyAccessToken } from '../utils/jwt';
+import { AuthTokenPayload, UserRole } from '../types/index';
 
 export interface AuthenticatedRequest extends Request {
   user?: AuthTokenPayload;
@@ -63,3 +63,4 @@ export function requireRoles(...roles: UserRole[]) {
     next();
   };
 }
+

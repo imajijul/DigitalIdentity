@@ -1,18 +1,18 @@
 import { Router } from 'express';
-import authRoutes from './authRoutes.ts';
-import studentRoutes from './studentRoutes.ts';
-import teacherRoutes from './teacherRoutes.ts';
-import departmentRoutes from './departmentRoutes.ts';
-import sessionRoutes from './sessionRoutes.ts';
-import idCardRoutes from './idCardRoutes.ts';
-import verificationRoutes from './verificationRoutes.ts';
-import applicationRoutes from './applicationRoutes.ts';
-import notificationRoutes from './notificationRoutes.ts';
-import auditRoutes from './auditRoutes.ts';
-import instituteRoutes from './instituteRoutes.ts';
-import statsRoutes from './statsRoutes.ts';
-import { verificationController } from '../controllers/verificationController.ts';
-import { authenticate, requireRoles } from '../middleware/auth.ts';
+import authRoutes from './authRoutes';
+import studentRoutes from './studentRoutes';
+import teacherRoutes from './teacherRoutes';
+import departmentRoutes from './departmentRoutes';
+import sessionRoutes from './sessionRoutes';
+import idCardRoutes from './idCardRoutes';
+import verificationRoutes from './verificationRoutes';
+import applicationRoutes from './applicationRoutes';
+import notificationRoutes from './notificationRoutes';
+import auditRoutes from './auditRoutes';
+import instituteRoutes from './instituteRoutes';
+import statsRoutes from './statsRoutes';
+import { verificationController } from '../controllers/verificationController';
+import { authenticate, requireRoles } from '../middleware/auth';
 
 const router = Router();
 const unwrap = (r: any) => (r && typeof r === 'object' && r.default ? r.default : r);
@@ -45,3 +45,4 @@ router.get(
 );
 
 export default router;
+

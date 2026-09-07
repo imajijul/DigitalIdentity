@@ -20,3 +20,4 @@ export async function generateQrDataUrl(verifyUrl: string): Promise<string> {
     },
   });
 }
+

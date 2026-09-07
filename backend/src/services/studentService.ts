@@ -1,9 +1,9 @@
-import { studentRepository } from '../repositories/studentRepository.ts';
-import { auditRepository } from '../repositories/auditRepository.ts';
-import { idCardRepository } from '../repositories/idCardRepository.ts';
-import { withTransaction } from '../config/database.ts';
-import { generateVerificationToken, hashVerificationToken, generateQrDataUrl } from '../utils/qrcode.ts';
-import { Student, AuthTokenPayload } from '../types/index.ts';
+import { studentRepository } from '../repositories/studentRepository';
+import { auditRepository } from '../repositories/auditRepository';
+import { idCardRepository } from '../repositories/idCardRepository';
+import { withTransaction } from '../config/database';
+import { generateVerificationToken, hashVerificationToken, generateQrDataUrl } from '../utils/qrcode';
+import { Student, AuthTokenPayload } from '../types/index';
 
 export const studentService = {
   async listStudents(params: {
@@ -177,3 +177,4 @@ export const studentService = {
     });
   },
 };
+

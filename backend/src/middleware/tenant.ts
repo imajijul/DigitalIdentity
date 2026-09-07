@@ -1,5 +1,5 @@
 import { Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from './auth.ts';
+import { AuthenticatedRequest } from './auth';
 
 /**
  * Resolves the authenticated user's instituteId.
@@ -41,3 +41,4 @@ export function enforceTenantIsolation(req: AuthenticatedRequest, res: Response,
 
   next();
 }
+

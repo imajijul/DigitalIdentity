@@ -1,7 +1,7 @@
 import { Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth.ts';
-import { getAuthorizedInstituteId } from '../middleware/tenant.ts';
-import { query } from '../config/database.ts';
+import { AuthenticatedRequest } from '../middleware/auth';
+import { getAuthorizedInstituteId } from '../middleware/tenant';
+import { query } from '../config/database';
 
 export const statsController = {
   async getDashboardStats(req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> {
@@ -61,3 +61,4 @@ export const statsController = {
     }
   },
 };
+

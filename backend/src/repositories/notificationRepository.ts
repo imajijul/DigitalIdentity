@@ -1,5 +1,5 @@
-import { query, IDatabaseClient } from '../config/database.ts';
-import { Notification } from '../types/index.ts';
+import { query, IDatabaseClient } from '../config/database';
+import { Notification } from '../types/index';
 
 export const notificationRepository = {
   async listByUser(userId: string): Promise<Notification[]> {
@@ -49,3 +49,4 @@ export const notificationRepository = {
     );
   },
 };
+

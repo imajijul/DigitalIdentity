@@ -1,6 +1,6 @@
 import { Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth.ts';
-import { notificationRepository } from '../repositories/notificationRepository.ts';
+import { AuthenticatedRequest } from '../middleware/auth';
+import { notificationRepository } from '../repositories/notificationRepository';
 
 export const notificationController = {
   async list(req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> {
@@ -51,3 +51,4 @@ export const notificationController = {
     }
   },
 };
+

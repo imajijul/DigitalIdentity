@@ -1,5 +1,5 @@
-import { query } from '../config/database.ts';
-import { Teacher } from '../types/index.ts';
+import { query } from '../config/database';
+import { Teacher } from '../types/index';
 
 export const teacherRepository = {
   async listByInstitute(instituteId?: string | null): Promise<Teacher[]> {
@@ -122,3 +122,4 @@ export const teacherRepository = {
     return (res.rowCount || 0) > 0;
   },
 };
+

@@ -1,5 +1,5 @@
-import { query } from '../config/database.ts';
-import { AcademicSession } from '../types/index.ts';
+import { query } from '../config/database';
+import { AcademicSession } from '../types/index';
 
 export const sessionRepository = {
   async listByInstitute(instituteId: string): Promise<AcademicSession[]> {
@@ -88,3 +88,4 @@ export const sessionRepository = {
     return (res.rowCount || 0) > 0;
   },
 };
+

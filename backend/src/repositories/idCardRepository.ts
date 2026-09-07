@@ -1,5 +1,5 @@
-import { query, IDatabaseClient } from '../config/database.ts';
-import { StudentIdCard, IdCardStatus } from '../types/index.ts';
+import { query, IDatabaseClient } from '../config/database';
+import { StudentIdCard, IdCardStatus } from '../types/index';
 
 export const idCardRepository = {
   async list(params: {
@@ -237,3 +237,4 @@ export const idCardRepository = {
     }
   },
 };
+

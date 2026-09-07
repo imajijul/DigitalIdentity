@@ -211,3 +211,4 @@ export interface AuthTokenPayload {
   instituteId: string | null;
   studentId?: string | null;
 }
+

@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
-import { verificationService } from '../services/verificationService.ts';
-import { verificationRepository } from '../repositories/verificationRepository.ts';
-import { AuthenticatedRequest } from '../middleware/auth.ts';
-import { getAuthorizedInstituteId } from '../middleware/tenant.ts';
+import { verificationService } from '../services/verificationService';
+import { verificationRepository } from '../repositories/verificationRepository';
+import { AuthenticatedRequest } from '../middleware/auth';
+import { getAuthorizedInstituteId } from '../middleware/tenant';
 
 export const verificationController = {
   /**
@@ -51,3 +51,4 @@ export const verificationController = {
     }
   },
 };
+

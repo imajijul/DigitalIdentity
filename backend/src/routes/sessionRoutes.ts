@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { sessionController } from '../controllers/sessionController.ts';
-import { authenticate, requireRoles } from '../middleware/auth.ts';
-import { enforceTenantIsolation } from '../middleware/tenant.ts';
+import { sessionController } from '../controllers/sessionController';
+import { authenticate, requireRoles } from '../middleware/auth';
+import { enforceTenantIsolation } from '../middleware/tenant';
 
 const router = Router();
 
@@ -13,3 +13,4 @@ router.put('/:id', requireRoles('SUPER_ADMIN', 'INSTITUTE_ADMIN'), enforceTenant
 router.delete('/:id', requireRoles('SUPER_ADMIN', 'INSTITUTE_ADMIN'), enforceTenantIsolation, sessionController.delete);
 
 export default router;
+

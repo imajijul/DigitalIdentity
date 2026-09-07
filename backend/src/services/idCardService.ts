@@ -1,11 +1,11 @@
-import { idCardRepository } from '../repositories/idCardRepository.ts';
-import { studentRepository } from '../repositories/studentRepository.ts';
-import { userRepository } from '../repositories/userRepository.ts';
-import { auditRepository } from '../repositories/auditRepository.ts';
-import { notificationRepository } from '../repositories/notificationRepository.ts';
-import { withTransaction } from '../config/database.ts';
-import { generateVerificationToken, hashVerificationToken, generateQrDataUrl } from '../utils/qrcode.ts';
-import { StudentIdCard, AuthTokenPayload } from '../types/index.ts';
+import { idCardRepository } from '../repositories/idCardRepository';
+import { studentRepository } from '../repositories/studentRepository';
+import { userRepository } from '../repositories/userRepository';
+import { auditRepository } from '../repositories/auditRepository';
+import { notificationRepository } from '../repositories/notificationRepository';
+import { withTransaction } from '../config/database';
+import { generateVerificationToken, hashVerificationToken, generateQrDataUrl } from '../utils/qrcode';
+import { StudentIdCard, AuthTokenPayload } from '../types/index';
 
 export const idCardService = {
   async listCards(params: {
@@ -210,3 +210,4 @@ export const idCardService = {
     return revoked;
   },
 };
+

@@ -1,8 +1,8 @@
 import { Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth.ts';
-import { getAuthorizedInstituteId } from '../middleware/tenant.ts';
-import { departmentRepository } from '../repositories/departmentRepository.ts';
-import { auditRepository } from '../repositories/auditRepository.ts';
+import { AuthenticatedRequest } from '../middleware/auth';
+import { getAuthorizedInstituteId } from '../middleware/tenant';
+import { departmentRepository } from '../repositories/departmentRepository';
+import { auditRepository } from '../repositories/auditRepository';
 
 export const departmentController = {
   async list(req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> {
@@ -122,3 +122,4 @@ export const departmentController = {
     }
   },
 };
+

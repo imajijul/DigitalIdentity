@@ -1,5 +1,5 @@
-import { query } from '../config/database.ts';
-import { VerificationLog, VerificationResult } from '../types/index.ts';
+import { query } from '../config/database';
+import { VerificationLog, VerificationResult } from '../types/index';
 
 export const verificationRepository = {
   async log(entry: {
@@ -89,3 +89,4 @@ export const verificationRepository = {
     };
   },
 };
+

@@ -1,5 +1,5 @@
-import { query } from '../config/database.ts';
-import { Institute } from '../types/index.ts';
+import { query } from '../config/database';
+import { Institute } from '../types/index';
 
 export const instituteRepository = {
   async findById(id: string): Promise<Institute | null> {
@@ -84,3 +84,4 @@ export const instituteRepository = {
     return (res.rowCount || 0) > 0;
   },
 };
+

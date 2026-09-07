@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { AuthTokenPayload } from '../types/index.ts';
+import { AuthTokenPayload } from '../types/index';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'digital_id_system_jwt_secret_key_2025_prod_secure';
 const REFRESH_SECRET = process.env.REFRESH_TOKEN_SECRET || 'digital_id_system_refresh_secret_key_2025_prod_secure';
@@ -27,3 +27,4 @@ export function verifyRefreshToken(token: string): AuthTokenPayload | null {
     return null;
   }
 }
+

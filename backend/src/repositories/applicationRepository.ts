@@ -1,5 +1,5 @@
-import { query, IDatabaseClient } from '../config/database.ts';
-import { IdCardApplication, ApplicationStatus, ApplicationType } from '../types/index.ts';
+import { query, IDatabaseClient } from '../config/database';
+import { IdCardApplication, ApplicationStatus, ApplicationType } from '../types/index';
 
 export const applicationRepository = {
   async list(params: {
@@ -129,3 +129,4 @@ export const applicationRepository = {
     return res.rows[0] || null;
   },
 };
+

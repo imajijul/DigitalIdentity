@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { authController } from '../controllers/authController.ts';
-import { authenticate } from '../middleware/auth.ts';
+import { authController } from '../controllers/authController';
+import { authenticate } from '../middleware/auth';
 
 const router = Router();
 
@@ -10,3 +10,4 @@ router.post('/logout', authController.logout);
 router.get('/me', authenticate, authController.me);
 
 export default router;
+

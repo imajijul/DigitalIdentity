@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { authService } from '../services/authService.ts';
-import { validateLoginInput, validateSignupInput } from '../validators/index.ts';
-import { AuthenticatedRequest } from '../middleware/auth.ts';
+import { authService } from '../services/authService';
+import { validateLoginInput, validateSignupInput } from '../validators/index';
+import { AuthenticatedRequest } from '../middleware/auth';
 
 export const authController = {
   async login(req: Request, res: Response, next: NextFunction): Promise<void> {
@@ -121,3 +121,4 @@ export const authController = {
     }
   },
 };
+

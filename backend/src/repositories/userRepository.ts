@@ -1,5 +1,5 @@
-import { query } from '../config/database.ts';
-import { User, UserRole } from '../types/index.ts';
+import { query } from '../config/database';
+import { User, UserRole } from '../types/index';
 
 export const userRepository = {
   async findByEmail(email: string): Promise<User | null> {
@@ -92,3 +92,4 @@ export const userRepository = {
     return res.rows;
   },
 };
+

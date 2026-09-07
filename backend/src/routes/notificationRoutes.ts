@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { notificationController } from '../controllers/notificationController.ts';
-import { authenticate } from '../middleware/auth.ts';
+import { notificationController } from '../controllers/notificationController';
+import { authenticate } from '../middleware/auth';
 
 const router = Router();
 
@@ -11,3 +11,4 @@ router.patch('/:id/read', notificationController.markRead);
 router.patch('/read-all', notificationController.markAllRead);
 
 export default router;
+

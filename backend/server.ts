@@ -2,9 +2,9 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import apiRouter from './src/routes/apiRouter.ts';
-import { errorHandler } from './src/middleware/errorHandler.ts';
-import { getDatabasePool } from './src/config/database.ts';
+import apiRouter from './src/routes/apiRouter';
+import { errorHandler } from './src/middleware/errorHandler';
+import { getDatabasePool } from './src/config/database';
 
 export function createBackendApp() {
   const app = express();
@@ -61,3 +61,4 @@ if (isMainModule && process.env.NODE_ENV !== 'test') {
     console.log(`Backend server listening on http://0.0.0.0:${PORT}`);
   });
 }
+

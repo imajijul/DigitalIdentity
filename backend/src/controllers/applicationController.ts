@@ -1,11 +1,11 @@
 import { Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth.ts';
-import { getAuthorizedInstituteId } from '../middleware/tenant.ts';
-import { applicationRepository } from '../repositories/applicationRepository.ts';
-import { studentRepository } from '../repositories/studentRepository.ts';
-import { idCardService } from '../services/idCardService.ts';
-import { notificationRepository } from '../repositories/notificationRepository.ts';
-import { userRepository } from '../repositories/userRepository.ts';
+import { AuthenticatedRequest } from '../middleware/auth';
+import { getAuthorizedInstituteId } from '../middleware/tenant';
+import { applicationRepository } from '../repositories/applicationRepository';
+import { studentRepository } from '../repositories/studentRepository';
+import { idCardService } from '../services/idCardService';
+import { notificationRepository } from '../repositories/notificationRepository';
+import { userRepository } from '../repositories/userRepository';
 
 export const applicationController = {
   async list(req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> {
@@ -144,3 +144,4 @@ export const applicationController = {
     }
   },
 };
+

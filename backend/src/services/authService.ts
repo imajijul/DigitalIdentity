@@ -1,10 +1,10 @@
-import { userRepository } from '../repositories/userRepository.ts';
-import { auditRepository } from '../repositories/auditRepository.ts';
-import { studentRepository } from '../repositories/studentRepository.ts';
-import { query } from '../config/database.ts';
-import { hashPassword, comparePassword } from '../utils/password.ts';
-import { signAccessToken, signRefreshToken } from '../utils/jwt.ts';
-import { User, AuthTokenPayload } from '../types/index.ts';
+import { userRepository } from '../repositories/userRepository';
+import { auditRepository } from '../repositories/auditRepository';
+import { studentRepository } from '../repositories/studentRepository';
+import { query } from '../config/database';
+import { hashPassword, comparePassword } from '../utils/password';
+import { signAccessToken, signRefreshToken } from '../utils/jwt';
+import { User, AuthTokenPayload } from '../types/index';
 
 export const authService = {
   async login(
@@ -174,3 +174,4 @@ export const authService = {
     return safeUser;
   },
 };
+

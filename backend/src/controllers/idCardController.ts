@@ -1,7 +1,7 @@
 import { Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth.ts';
-import { getAuthorizedInstituteId } from '../middleware/tenant.ts';
-import { idCardService } from '../services/idCardService.ts';
+import { AuthenticatedRequest } from '../middleware/auth';
+import { getAuthorizedInstituteId } from '../middleware/tenant';
+import { idCardService } from '../services/idCardService';
 
 export const idCardController = {
   async list(req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> {
@@ -186,3 +186,4 @@ export const idCardController = {
     }
   },
 };
+
